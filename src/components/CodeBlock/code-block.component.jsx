@@ -13,11 +13,9 @@ class CodeBlock extends React.Component {
     render() {
 
         return (
-            <div className="junk">
-                <SyntaxHighlighter language="javascript" style={style}>
-                {this.props.value}
-                </SyntaxHighlighter>
-            </div>
+            <SyntaxHighlighter language="javascript" style={style}>
+              {this.props.value}
+            </SyntaxHighlighter>
           );
         
         // return(
