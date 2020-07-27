@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactMarkdown from 'react-markdown';
+// import CodeBlock from './CodeBlock';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      lab: {
+        steps:[
+          {
+            title: "Step 2",
+            markdown: "### Step 1 - Insert a record\n" +
+            "```\n" +
+            "db.mycollection.insertOne({ name: 'fred'})\n" +
+            "```\n"
+          }
+        ]
+      },
+      currentStep: 0,
+      simple: '# This is a header\n\nAnd this is a paragraph'
+    };
+  }
+
+  render() {
+    return (
+      <div className="App">
+      <h2>{this.state.lab.steps[0].title}</h2>
+        <ReactMarkdown source={this.state.lab.steps[this.state.currentStep].markdown} ></ReactMarkdown>
+        <button>Previous</button>
+        <button>Copy Text</button>
+        <button>Check Results</button>
+        <button disabled>Next</button>
+        </div>
+    );
+  }
 }
 
 export default App;
