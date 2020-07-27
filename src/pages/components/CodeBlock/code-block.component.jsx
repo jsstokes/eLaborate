@@ -8,10 +8,11 @@ class CodeBlock extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         return(
             <div className='CodeBlock'>
-                {this.props.value}
+                <pre>
+                    {this.props.value}
+                </pre>
             </div>
         );
 

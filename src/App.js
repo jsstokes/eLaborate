@@ -1,4 +1,5 @@
 import React from "react";
+import {Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from './pages/components/CodeBlock/code-block.component';
@@ -17,14 +18,19 @@ class App extends React.Component {
             "```\n" +
             "db.mycollection.insertOne({ name: 'fred'})\n" +
             "```\n",
-            copyText: "db.mycollection.insertOne({ name: 'fred'})"
+            copyText: "db.mycollection.insertOne({ name: 'fred'})",
           },
           {
             title: "Step 2",
             markdown: "### Step 2 - Find a record\n" +
             "```\n" +
-            "db.mycollection.findOne()\n" +
-            "```\n",
+            "db.mycollection.findOne(\n" +
+            "                          {\n" +
+            "                            name: 'fred',\n" +
+            "                            city: 'Bedrock'\n" +
+            "                          }\n" +
+            "                        );\n" +
+            "```",
             copyText: "db.mycollection.findOne()"
           },
           {
@@ -35,13 +41,14 @@ class App extends React.Component {
         ]
       },
       currentStep: 0,
-      disableNextStep: true,
-      allowPreviousStep: false,
+      disableNextStep: false,
+      disablePreviousStep: true,
       allowCopyText: true
     };
   }
 
   nextStep = () => {
+    console.log("Going to Next Step from:", this.state.currentStep);
     var nextStep = this.state.currentStep + 1;
     if ((nextStep + 1) >= this.state.lab.steps.length) {
       this.setState({disableNextStep: true});
@@ -50,11 +57,46 @@ class App extends React.Component {
       console.log('Length of steps:', this.state.lab.steps.length);
     }
     this.setState({currentStep: nextStep});
+
+    if ( nextStep > 0) {
+      this.setState({disablePreviousStep: false});
+      console.log("Allow Previous Step");
+    } else {
+      console.log("Disable Previous Step");
+      this.setState({disablePreviousStep: true});
+    }
   }
 
-  checkForNextStep = () => {
-
+  previoiusStep = () => {
+    var nextStep = this.state.currentStep - 1;
+    if ((nextStep + 1) >= this.state.lab.steps.length) {
+      this.setState({disableNextStep: true});
+    } else {
+      console.log('Allowing nextStep of:', nextStep);
+      console.log('Length of steps:', this.state.lab.steps.length);
+    }
+    this.setState({currentStep: nextStep});
+    if ( nextStep > 0) {
+      this.setState({disablePreviousStep: false});
+      console.log("Allow Previous Step");
+    } else {
+      console.log("Disable Previous Step");
+      this.setState({disablePreviousStep: true});
+    }
   }
+
+  checkResultsButton() {
+    if (this.state.lab.steps[this.state.currentStep].hasOwnProperty("checkResults")) {
+      console.log("step has check Results");
+      return(
+        <Button className='btn btn-primary btn-spacing' onClick={this.checkResults} >Check Results</Button>
+      );
+    } else {
+      console.log("step has NO check Results");
+      return;
+    }
+  }
+
 
   checkResults = () => {
     this.setState({disableNextStep: false});
@@ -68,10 +110,10 @@ class App extends React.Component {
           source={this.state.lab.steps[this.state.currentStep].markdown} 
           renderers={{ code: CodeBlock }}
         ></ReactMarkdown>
-        <button className='btn btn-secondary btn-spacing'disabled={this.state.allowPreviousStep}>Previous</button>
-        <button className='btn btn-success btn-spacing'>Copy Text</button>
-        <button className='btn btn-primary btn-spacing' onClick={this.checkResults} >Check Results</button>
-        <button className='btn btn-primary btn-spacing' onClick={this.nextStep} disabled={this.state.disableNextStep}>Next</button>
+        <Button className='btn btn-secondary btn-spacing' onClick={this.previoiusStep} disabled={this.state.disablePreviousStep}>Previous</Button>
+        <Button className='btn btn-success btn-spacing'>Copy Text</Button>
+        {this.checkResultsButton()}
+        <Button className='btn btn-primary btn-spacing' onClick={this.nextStep} disabled={this.state.disableNextStep}>Next</Button>
         </div>
     );
   }

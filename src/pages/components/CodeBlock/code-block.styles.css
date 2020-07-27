@@ -10,3 +10,7 @@
     margin-bottom: 15px;
     padding: 25px;
 }
+pre {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
