@@ -1,7 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactMarkdown from 'react-markdown';
-// import CodeBlock from './CodeBlock';
+import CodeBlock from './pages/components/CodeBlock/code-block.component';
 
 import "./App.css";
 
@@ -64,7 +64,10 @@ class App extends React.Component {
     return (
       <div className="App">
       <h2>{this.state.lab.steps[this.state.currentStep].title}</h2>
-        <ReactMarkdown source={this.state.lab.steps[this.state.currentStep].markdown} ></ReactMarkdown>
+        <ReactMarkdown 
+          source={this.state.lab.steps[this.state.currentStep].markdown} 
+          renderers={{ code: CodeBlock }}
+        ></ReactMarkdown>
         <button className='btn btn-secondary btn-spacing'disabled={this.state.allowPreviousStep}>Previous</button>
         <button className='btn btn-success btn-spacing'>Copy Text</button>
         <button className='btn btn-primary btn-spacing' onClick={this.checkResults} >Check Results</button>
