@@ -4,6 +4,8 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 import MainPage from './pages/main-page/main-page.page';
 import StudentPage from './pages/student-view/student-view.page';
+import NavBar from './components/NavBar/nav-bar.component';
+
 
 import "./App.css";
 
@@ -59,7 +61,7 @@ class App extends React.Component {
   render() {
     return(
       <BrowserRouter>
-       <Header/>
+       <NavBar/>
         <Switch>
           <Route  exact path='/' component={MainPage}></Route>
           <Route  exact path='/preview' component={StudentPage}></Route>
