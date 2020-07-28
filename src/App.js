@@ -1,5 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+// eslint-disable-next-line
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 import MainPage from './pages/main-page/main-page.page';
@@ -9,12 +10,7 @@ import NavBar from './components/NavBar/nav-bar.component';
 
 import "./App.css";
 
-const Header = () => (
-  <div>
-  &nbsp;&nbsp;&nbsp;<Link to="/">Home</Link>&nbsp;&nbsp;&nbsp;
-    <Link to="/preview">Preview</Link>
-  </div>
-)
+
 
 
 class App extends React.Component {
@@ -24,15 +20,16 @@ class App extends React.Component {
       lab: {
         steps:[
           {
-            title: "Step 1",
-            markdown: "### Step 1 - Insert a record\n" +
+            title: "Step 1 -1 ",
+            markdown: "### Step 1 - Insert a record or so\n" +
+            "This will insert a document into the collection named my collection `asdf`" +
             "```\n" +
             "db.mycollection.insertOne({ name: 'fred'})\n" +
             "```\n",
             copyText: null //"db.mycollection.insertOne({ name: 'fred'})",
           },
           {
-            title: "Step 2",
+            title: "Step 2-1 ",
             markdown: "### Step 2 - Find a record\n" +
             "```\n" +
             "db.mycollection.findOne(\n" +
