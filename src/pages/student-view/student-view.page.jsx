@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from '../../components/CodeBlock/code-block.component';
 
+import { connect } from 'react-redux';
+
 
 function PreviousButton(props) {
     return (
@@ -25,42 +27,10 @@ function PreviousButton(props) {
   }
 
   class StudentPage extends React.Component {
-    constructor() {
+    constructor(props) {
         super();
         this.state = {
-          lab: {
-            steps:[
-              {
-                title: "Step 1",
-                markdown: "### Step 1 - Insert a record\n" +
-                "testing adding some text\n" +
-                "testing adding some text\n" +
-                "testing adding some text\n `asdasdfasdf`\n" +
-                "```\n" +
-                "db.mycollection.insertOne({ name: 'fred'})\n" +
-                "```\n",
-                copyText: null //"db.mycollection.insertOne({ name: 'fred'})",
-              },
-              {
-                title: "Step 2",
-                markdown: "### Step 2 - Find a record\n" +
-                "```\n" +
-                "db.mycollection.findOne(\n" +
-                "                          {\n" +
-                "                            name: 'fred',\n" +
-                "                            city: 'Bedrock'\n" +
-                "                          }\n" +
-                "                        );\n" +
-                "```",
-                copyText: "db.mycollection.findOne()"
-              },
-              {
-                title: "Congratulations!!  You have completed this section.",
-                markdown:"## Section Complete",
-                copyText: null
-              }
-            ]
-          },
+          currentLab: props.currentLab,
           currentStep: 0,
           disableNextStep: false,
           disablePreviousStep: true,
@@ -70,7 +40,7 @@ function PreviousButton(props) {
     
       nextStep = () => {
         var nextStep = this.state.currentStep + 1;
-        if ((nextStep + 1) >= this.state.lab.steps.length) {
+        if ((nextStep + 1) >= this.state.currentLab.steps.length) {
           this.setState({disableNextStep: true});
         } 
         this.setState({currentStep: nextStep});
@@ -84,7 +54,7 @@ function PreviousButton(props) {
     
       previoiusStep = () => {
         var previousStep = this.state.currentStep - 1;
-        if ((previousStep + 1) >= this.state.lab.steps.length) {
+        if ((previousStep + 1) >= this.state.currentLab.steps.length) {
           this.setState({disableNextStep: true});
         } else 
         this.setState({currentStep: previousStep});
@@ -103,7 +73,7 @@ function PreviousButton(props) {
       }
     
       checkResultsButton() {
-        if (this.state.lab.steps[this.state.currentStep].hasOwnProperty("checkResults")) {
+        if (this.state.currentLab.steps[this.state.currentStep].hasOwnProperty("checkResults")) {
           return(
             <Button className='btn btn-primary btn-spacing' onClick={this.checkResults} >Check Results</Button>
           );
@@ -118,15 +88,15 @@ function PreviousButton(props) {
       render() {
         return (
           <div className="App">
-          <h2>{this.state.lab.steps[this.state.currentStep].title}</h2>
+          <h2>{this.state.currentLab.steps[this.state.currentStep].title}</h2>
           <div className="junk">
           <ReactMarkdown 
-          source={this.state.lab.steps[this.state.currentStep].markdown} 
+          source={this.state.currentLab.steps[this.state.currentStep].markdown} 
           renderers={{ code: CodeBlock }}
           ></ReactMarkdown>
           </div>
           <PreviousButton onClick={this.previoiusStep} disabled={this.state.disablePreviousStep}></PreviousButton>
-          <CopyTextButton step={this.state.lab.steps[this.state.currentStep]}></CopyTextButton>
+          <CopyTextButton step={this.state.currentLab.steps[this.state.currentStep]}></CopyTextButton>
           {this.checkResultsButton()}
           <Button className='btn btn-primary btn-spacing' onClick={this.nextStep} disabled={this.state.disableNextStep}>Next</Button>
             </div>
@@ -134,4 +104,8 @@ function PreviousButton(props) {
       }
   }
 
-  export default StudentPage;
+  const mapStateToProps = state => ({
+    currentLab: state.lab.currentLab
+  })
+
+  export default connect(mapStateToProps)(StudentPage);
