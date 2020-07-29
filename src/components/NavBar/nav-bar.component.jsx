@@ -16,8 +16,8 @@ export const NavBar = (props) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link as={Link} to="/" eventKey='/' isActive={isActive.bind(this, '/')}>Home</Nav.Link>
-          <Nav.Link as={Link} to="/preview" eventKey='/preview' isActive={isActive.bind(this, '/preview')}>Preview</Nav.Link>
+          <Nav.Link as={Link} to="/" eventKey='/' >Home</Nav.Link>
+          <Nav.Link as={Link} to="/preview" eventKey='/preview' >Preview</Nav.Link>
           {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">

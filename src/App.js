@@ -6,13 +6,9 @@ import { connect } from 'react-redux';
 import MainPage from './pages/main-page/main-page.page';
 import StudentPage from './pages/student-view/student-view.page';
 import NavBar from './components/NavBar/nav-bar.component';
-import { setCurrentLab } from './redux/lab/lab.actions';
-
+import setCurrentLab from './redux/lab/lab.actions';
 
 import "./App.css";
-
-
-
 
 class App extends React.Component {
   constructor() {
