@@ -15,11 +15,11 @@ function PreviousButton(props) {
   }
   
 function CopyTextButton(props) {
-
   var step = props.step;
+  console.log("Step in CopyTextButton Click():",step);
   if ((step.hasOwnProperty('copyText')) && ((step.copyText != null) && (step.copyText !== ""))) {
     return(
-      <Button className='btn btn-success btn-spacing'>Copy Text</Button>
+      <Button className='btn btn-success btn-spacing' onClick={() => {navigator.clipboard.writeText(step.copyText)}}>Copy Text</Button>
     );
   }
   else {
