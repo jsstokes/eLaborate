@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/eLaborate/static/css/main.a0577cc9.chunk.css",
+    "main.js": "/eLaborate/static/js/main.650ff4b1.chunk.js",
+    "main.js.map": "/eLaborate/static/js/main.650ff4b1.chunk.js.map",
+    "runtime-main.js": "/eLaborate/static/js/runtime-main.50b189da.js",
+    "runtime-main.js.map": "/eLaborate/static/js/runtime-main.50b189da.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/eLaborate/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.59f66cbd.chunk.js": "/eLaborate/static/js/2.59f66cbd.chunk.js",
+    "static/js/2.59f66cbd.chunk.js.map": "/eLaborate/static/js/2.59f66cbd.chunk.js.map",
+    "index.html": "/eLaborate/index.html",
+    "precache-manifest.de903fef0ec6e660661f3a9b1936460a.js": "/eLaborate/precache-manifest.de903fef0ec6e660661f3a9b1936460a.js",
+    "service-worker.js": "/eLaborate/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/eLaborate/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.a0577cc9.chunk.css.map": "/eLaborate/static/css/main.a0577cc9.chunk.css.map",
+    "static/js/2.59f66cbd.chunk.js.LICENSE.txt": "/eLaborate/static/js/2.59f66cbd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50b189da.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.59f66cbd.chunk.js",
+    "static/css/main.a0577cc9.chunk.css",
+    "static/js/main.650ff4b1.chunk.js"
+  ]
+}
