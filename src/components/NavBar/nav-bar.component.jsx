@@ -7,6 +7,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
+// eslint-disable-next-line
 const isActive = (path, match, location) => !!(match || path === location.pathname);
 
 export const NavBar = (props) => {

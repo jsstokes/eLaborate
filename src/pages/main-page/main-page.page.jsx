@@ -62,7 +62,7 @@ class MainPage extends React.Component {
             return(
             <div>
                 No Lab Selected<br/>
-                <Button onClick={this.testClick}>Test this</Button>
+                <Button onClick={this.testClick}>Use Sample Lab</Button>
             </div>);
         }
         return(
