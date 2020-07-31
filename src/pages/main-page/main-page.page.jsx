@@ -24,8 +24,6 @@ class MainPage extends React.Component {
                   {
                     title: "Sample Lab Step 1 from Redux",
                     markdown: "### Step 1 - Insert a record\n" +
-                    "testing adding some text\n" +
-                    "testing adding some text\n" +
                     "testing adding some text\n `asdasdfasdf`\n" +
                     "```\n" +
                     "db.mycollection.insertOne({ name: 'fred'})\n" +

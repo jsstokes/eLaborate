@@ -12,7 +12,10 @@
     padding: 7px;
     padding-left: 12px;
     padding-right: 12px;
-    background-color: rgba(179, 167, 167, 0.872);
+    /* background-color: rgba(179, 167, 167, 0.872); */
+    /* float: right; */
+    width: 95%;
+    height: 300px;
 }
 
 .step-button {
