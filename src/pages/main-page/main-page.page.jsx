@@ -22,7 +22,7 @@ class MainPage extends React.Component {
         const junk = {
                 steps:[
                   {
-                    key: 100,
+                    stepKey: 100,
                     title: "Sample Lab Step 1 from Redux",
                     markdown: "### Step 1 - Insert a record\n" +
                     "testing adding some text\n `asdasdfasdf`\n" +
@@ -33,7 +33,7 @@ class MainPage extends React.Component {
                     checkResults: "asfasdf"
                   },
                   {
-                    key: 200,
+                    stepKey: 200,
                     title: "Sample Lab Step 2",
                     markdown: "### Step 2 - Find a record\n" +
                     "```\n" +
@@ -47,7 +47,7 @@ class MainPage extends React.Component {
                     copyText: "db.mycollection.findOne()"
                   },
                   {
-                    key: 300,
+                    stepKey: 300,
                     title: "Congratulations!!  You have completed this section.",
                     markdown:"## Section Complete",
                     copyText: ""

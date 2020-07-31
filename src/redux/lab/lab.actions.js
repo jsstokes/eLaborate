@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-const setCurrentLab = lab => ({
+export const setCurrentLab = lab => ({
     type: 'SET_CURRENT_LAB',
     payload: lab
 });

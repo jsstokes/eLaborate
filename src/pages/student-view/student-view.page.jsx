@@ -16,7 +16,6 @@ function PreviousButton(props) {
   
 function CopyTextButton(props) {
   var step = props.step;
-  console.log("Step in CopyTextButton Click():",step);
   if ((step.hasOwnProperty('copyText')) && ((step.copyText != null) && (step.copyText !== ""))) {
     return(
       <Button className='btn btn-success btn-spacing' onClick={() => {navigator.clipboard.writeText(step.copyText)}}>Copy Text</Button>
@@ -77,20 +76,16 @@ class StudentPage extends React.Component {
 
       // See if there are more steps and adjust the NEXT button
       if (areOnLastStep) {
-        console.log("gotoPreviousStep: On Last Step");
         this.setState({disableNextStep: true});     // No more steps, disable the button
       } else {
-        console.log("gotoPreviousStep: more Steps left");
         this.setState({disableNextStep: false});    // More steps left, enable the button
       }
       
       // See if there are previous steps and adjust the button
       if ( previousStep > 0) {
-        console.log("gotoPreviousStep: there are previous steps");
         this.setState({disablePreviousStep: false});  // Not on the first step, enable the button
         this.setState({currentStep: previousStep});   // set to the previous step
       } else {
-        console.log("gotoPreviousStep: At the beginning/first");
         this.setState({disablePreviousStep: true});   // On the FIRST step, so disable the button
         this.setState({currentStep: previousStep});
       }
@@ -118,7 +113,6 @@ class StudentPage extends React.Component {
     }
   
     render() {
-        console.log("StudentView->currentLab:", this.props.currentLab);
         if (this.props.currentLab == null) {
           return(
             <div className="container"><h1>Preview not available</h1><b>No Lab Selected</b></div>
