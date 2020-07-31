@@ -33,6 +33,7 @@ class Step  extends React.Component {
     }
 
     onShowState = () => {
+        console.log(this.state);
     }
 
     render() {
