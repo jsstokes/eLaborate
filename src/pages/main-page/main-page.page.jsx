@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import {Button} from 'react-bootstrap';
 
+import StepList from '../../components/step-list/step-list.component';
+
 import setCurrentLab  from '../../redux/lab/lab.actions';
 
 import './main-page.styles.css';
@@ -24,7 +26,6 @@ class MainPage extends React.Component {
                     markdown: "### Step 1 - Insert a record\n" +
                     "testing adding some text\n" +
                     "testing adding some text\n" +
-                    "### Heoping Kiley get Dallas" +
                     "testing adding some text\n `asdasdfasdf`\n" +
                     "```\n" +
                     "db.mycollection.insertOne({ name: 'fred'})\n" +
@@ -64,10 +65,13 @@ class MainPage extends React.Component {
                 No Lab Selected<br/>
                 <Button onClick={this.testClick}>Use Sample Lab</Button>
             </div>);
-        }
-        return(
-            <div className="container">Main Page</div>
-        );
+        } else {
+          return(
+              <div className="container">
+                <StepList steps={this.props.currentLab.steps}/>
+              </div>
+          )
+      }
     }
 
 }

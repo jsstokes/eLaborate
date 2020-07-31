@@ -1,0 +1,21 @@
+.step {
+    border: solid;
+    border-radius: 7px;
+    border-color: black;
+    border-width: 2px;
+    margin: 7px;
+    padding: 7px;
+    background-color: whitesmoke;
+}
+.markdown {
+    margin: 7px;
+    padding: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgba(179, 167, 167, 0.872);
+}
+
+.step-button {
+    margin-right: 25px;
+    margin-left: 25px;
+}
