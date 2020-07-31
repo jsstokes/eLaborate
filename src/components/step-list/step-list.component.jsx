@@ -17,7 +17,7 @@ class StepList extends React.Component {
             //     <Step step={step}/>
             // ))}
             <div>{this.props.steps.map( (step,index) => (
-                    <Step step={step}/>
+                    <Step step={step} key={index}/>
                 )
 
             )}</div>
