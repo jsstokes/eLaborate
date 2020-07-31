@@ -4,7 +4,7 @@
     border-color: black;
     border-width: 2px;
     margin: 7px;
-    padding: 7px;
+    padding: 17px;
     background-color: whitesmoke;
 }
 .markdown {
@@ -14,7 +14,7 @@
     padding-right: 12px;
     /* background-color: rgba(179, 167, 167, 0.872); */
     /* float: right; */
-    width: 95%;
+    width: 100%;
     height: 300px;
 }
 

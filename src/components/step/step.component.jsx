@@ -27,8 +27,8 @@ class Step  extends React.Component {
                 <div><textarea class="markdown" type="textarea" value={this.props.step.markdown}></textarea><br/></div>
                 {/* <div className="markdown">{this.props.step.markdown}</div><br/> */}
                 <hr></hr>
-                <b>Text to Copy</b>: {this.props.step.copyText}<br/>
-                <b>Check Results</b>: {this.props.step.checkResults}
+                <b>Text to Copy</b>: <input type="text" value={this.props.step.copyText} size='120' /><br/>
+                {/* <b>Check Results</b>: <input type="text" value={this.props.step.checkResults}/> */}
                 <hr/>
                 <button className="btn btn-info step-button">Preview</button>
                 <EditStep></EditStep>
