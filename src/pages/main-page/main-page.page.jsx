@@ -72,7 +72,8 @@ class MainPage extends React.Component {
                 <StepList steps={this.props.currentLab.steps}/>
               </div>
           )
-      }
+        }
+        return(<div>Something should be here</div>);
     }
 
 }
