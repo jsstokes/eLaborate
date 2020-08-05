@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "44369067df7e86642c6af91b699ebc51",
+    "revision": "ef45a1cc122335658298820fa817864f",
     "url": "/eLaborate/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/eLaborate/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "e417f70e42ee93fa9770",
+    "revision": "fcb44cccbe016a1d7fb6",
     "url": "/eLaborate/static/css/main.e1594d5a.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/eLaborate/static/js/2.670d380b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e417f70e42ee93fa9770",
-    "url": "/eLaborate/static/js/main.5ca0e7fb.chunk.js"
+    "revision": "fcb44cccbe016a1d7fb6",
+    "url": "/eLaborate/static/js/main.6c938b18.chunk.js"
   },
   {
     "revision": "ef0ab80d39cb0207a9b8",

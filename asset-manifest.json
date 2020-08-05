@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/eLaborate/static/css/main.e1594d5a.chunk.css",
-    "main.js": "/eLaborate/static/js/main.5ca0e7fb.chunk.js",
-    "main.js.map": "/eLaborate/static/js/main.5ca0e7fb.chunk.js.map",
+    "main.js": "/eLaborate/static/js/main.6c938b18.chunk.js",
+    "main.js.map": "/eLaborate/static/js/main.6c938b18.chunk.js.map",
     "runtime-main.js": "/eLaborate/static/js/runtime-main.50b189da.js",
     "runtime-main.js.map": "/eLaborate/static/js/runtime-main.50b189da.js.map",
     "static/css/2.af3c1da9.chunk.css": "/eLaborate/static/css/2.af3c1da9.chunk.css",
     "static/js/2.670d380b.chunk.js": "/eLaborate/static/js/2.670d380b.chunk.js",
     "static/js/2.670d380b.chunk.js.map": "/eLaborate/static/js/2.670d380b.chunk.js.map",
     "index.html": "/eLaborate/index.html",
-    "precache-manifest.74a9c549d7d9f7f7764302bdf4020dbd.js": "/eLaborate/precache-manifest.74a9c549d7d9f7f7764302bdf4020dbd.js",
+    "precache-manifest.dce339a40a7703b5cc9a9585295d4c51.js": "/eLaborate/precache-manifest.dce339a40a7703b5cc9a9585295d4c51.js",
     "service-worker.js": "/eLaborate/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/eLaborate/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.e1594d5a.chunk.css.map": "/eLaborate/static/css/main.e1594d5a.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.670d380b.chunk.js",
     "static/css/main.e1594d5a.chunk.css",
-    "static/js/main.5ca0e7fb.chunk.js"
+    "static/js/main.6c938b18.chunk.js"
   ]
 }
