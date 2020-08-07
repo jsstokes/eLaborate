@@ -7,7 +7,6 @@ const INIITIAL_STATE = {
     //         markdown: "### Step 1 - Insert a record\n" +
     //         "testing adding some text\n" +
     //         "testing adding some text\n" +
-    //         "### Heoping Kiley get Dallas" +
     //         "testing adding some text\n `asdasdfasdf`\n" +
     //         "```\n" +
     //         "db.mycollection.insertOne({ name: 'fred'})\n" +

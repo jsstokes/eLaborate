@@ -73,6 +73,7 @@ class MainPage extends React.Component {
               </div>
           )
         }
+        // eslint-disable-next-line
         return(<div>Something should be here</div>);
     }
 
