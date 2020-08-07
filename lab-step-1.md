@@ -8,3 +8,7 @@ with a list
  1. item 3
  
  **and whatever else**
+ 
+ ```
+ db.collection.find({name: "test"})
+ ```
