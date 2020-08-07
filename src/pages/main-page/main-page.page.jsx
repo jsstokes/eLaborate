@@ -13,7 +13,8 @@ import './main-page.styles.css';
 class MainPage extends React.Component {
     // eslint-disable-next-line
     constructor(props) {
-        super();
+      super();
+      console.log("Main Page constructor...");
         
     }
 
@@ -23,18 +24,25 @@ class MainPage extends React.Component {
                 steps:[
                   {
                     stepKey: 100,
-                    title: "Sample Lab Step 1 from Redux",
-                    markdown: "### Step 1 - Insert a record\n" +
-                    "testing adding some text\n `asdasdfasdf`\n" +
-                    "```\n" +
-                    "db.mycollection.insertOne({ name: 'fred'})\n" +
-                    "```\n",
+                    title: "TEST STEP 1",
+                    // markdown: "```\ndb.mycollection.insertOne({ name: 'fred'})\n```\n",
+                    markdown: "# Here's the title\n" +
+                      "This is some body test.\n" +
+                      "with a list\n" +
+                      " 1. item 1\n" +
+                      " 1. item 2\n" +
+                      " 1. item 3\n"+
+                      "**and whatever else**\n"+
+                      "```\n"+
+                      "db.collection.find({name: \"test\"})\n" +
+                      "```\n",
+
                     copyText: "db.mycollection.insertOne({ name: 'fred'})",
                     checkResults: "asfasdf"
                   },
                   {
                     stepKey: 200,
-                    title: "Sample Lab Step 2",
+                    title: "Sample Lab Step 2 CHANGED",
                     markdown: "### Step 2 - Find a record\n" +
                     "```\n" +
                     "db.mycollection.findOne(\n" +

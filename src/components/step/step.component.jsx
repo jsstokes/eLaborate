@@ -41,7 +41,8 @@ class Step  extends React.Component {
             <div className="step">
                 <label>Title</label> <input name='title' type='text' value={this.state.step.title} onChange={this.handleChange}/><hr/>
                 <b>MarkDown</b>: <br/>
-                <div><textarea name="markdown" className="markdown" type="textarea" value={this.state.step.markdown} onChange={this.handleChange}></textarea><br/></div>
+                <div><textarea name="markdown" className="markdown" type="textarea" value={this.state.step.copyText} onChange={this.handleChange}></textarea><br/></div>
+                {/* <div><textarea name="markdown" className="markdown" type="textarea" value={this.state.step.markdown} onChange={this.handleChange}></textarea><br/></div> */}
                 <hr></hr>
                 <b>Text to Copy</b><input type="text" name="copyText" value={this.state.step.copyText} onChange={this.handleChange} size='120' /><br/>
                 <hr/>
